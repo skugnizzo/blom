@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+    if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.open("GET","data.xml",false);
+    xmlhttp.send();
+	
+	 
+
+    function a() {
+        var i;
+        var txt = "";
+		var txt2="";
+        for (i = 0; i <xmlhttp.responseXML.getElementsByTagName("Data").length; i++) {
+
+            txt = xmlhttp.responseXML.getElementsByTagName("Data")[i].childNodes[0].nodeValue + "<br>";
+            document.write(txt);
+			txt2=xmlhttp.responseXML.getElementsByTagName("Data").length
+			document.write(txt2);
+        }
+    }
+	

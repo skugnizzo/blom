@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function myFunction() {
+    y = parseInt (document.modulo.X.value);
+    z = parseInt (document.modulo.Y.value);
+    x = y / z;
+    document.getElementById("demo").innerHTML = x;
+alert(x);
+}
+</script>
+
+
+<H1>Divisione tra due numeri interi</H1>
+
+
+<FORM NAME="modulo" >
+    <P>
+        x = <INPUT TYPE="TEXT" id="X" SIZE="30" NAME="x"><BR>
+        y = <INPUT TYPE="TEXT" id="Y" SIZE="30" NAME="y">
+    </P>
+	</FORM>
+	
+    <P>
+        <INPUT TYPE="button" VALUE="esegui" onClick="myFunction()">
+    </P>
+
+    <p id="demo"></p>
+
+</BODY>
+</html>

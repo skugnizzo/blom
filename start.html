@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+    if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.open("GET","data.xml",false);
+    xmlhttp.send();
+	
+	 
+
+    function a() {
+        var i;
+        var txt = "";
+		var txt2="";
+        for (i = 0; i <xmlhttp.responseXML.getElementsByTagName("Data").length; i++) {
+
+            txt = xmlhttp.responseXML.getElementsByTagName("Data")[i].childNodes[0].nodeValue + "<br>";
+            document.write(txt);
+			txt2=xmlhttp.responseXML.getElementsByTagName("Data").length
+			document.write(txt2);
+        }
+    }
+	
+
+    function b(){
+        var i;
+        var txt = "";
+
+
+            txt = xmlhttp.responseXML.getElementsByTagName("Data")[0].childNodes[0].nodeValue + "<br>";
+            if (txt="A2A IM Equity")
+            {
+                document.write("bb");
+            }
+        else
+                document.write(txt);
+
+    }
+
+    function c(){
+        var i;
+        var txt = "";
+       var arr=[];
+        for (i = 0; i <xmlhttp.responseXML.getElementsByTagName("Data").length; i++) {
+
+            txt = xmlhttp.responseXML.getElementsByTagName("Data")[i].childNodes[0].nodeValue;
+            arr.push(txt);
+       }
+
+
+        var posizione;
+		var s = titolo.value;
+        posizione = arr.indexOf(s);
+        document.write(posizione);
+		var buy= parseInt (posizione+1);
+		var neutral = parseInt (posizione+2);
+		var sell = parseInt (posizione+3);
+		var totAnalisti= parseInt (posizione+4);
+		var Verbo1;
+		var Verbo2;
+		var Verbo3;
+		
+		var percentuale = (buy / 
+		if (buy>sell) {
+		Verbo1= "ottimisti";
+		else ( buy = 
+		
+		a=preval
+		
+		
+		var text = "Sul titolo 
+		
+document.getElementById("demo").innerHTML = text;
+    }
+	
+	function f(){
+        var i;
+        var txt = "";
+       var arr=[];
+        for (i = 0; i <xmlhttp.responseXML.getElementsByTagName("Data").length; i++) {
+
+            txt = xmlhttp.responseXML.getElementsByTagName("Data")[i].childNodes[0].nodeValue;
+            arr.push(txt);
+       }
+
+
+        var posizione;
+        posizione = arr.indexOf(titolo);
+        document.write(posizione);
+		document.write("titolo");
+
+    }
+	
+	function g() {
+        var s = titolo.value;
+         document.write(s);
+      }
+	 
+	
+
+
+
+	  
+	  
+	/*
+    function d() {
+
+        for (i = 0; i < xmlhttp.responseXML.getElementsByTagName("Data").length; i++) {
+
+            txt = xmlhttp.responseXML.getElementsByTagName("Data")[i].childNodes[0].nodeValue;
+            var pos = txt.indexOf({{name}});
+            document.write(pos);
+      }
+
+    }
+
+
+*/
+
+
+</script>
+
+
+    <p>Cerca titolo</p>
+    <p>Titolo: <input type="text" id="titolo" name="titolo" value="prova"></p>
+  
+
+
+
+
+
+
+<p id="demo"> ciao </p>
+<button onclick="a()">a</button>
+<button onclick="b()">b</button>
+<button onclick="c()">c</button>
+<button onclick="f()">f</button>
+<button onclick="g()">g</button>
+
+
+<!--
+<script>
+document.write(arr);
+
+ for (i = 0; i < xmlhttp.responseXML.getElementsByTagName("Data").length; i++) {
+
+
+}
+ for (i = 0; i <xmlhttp.responseXML.getElementsByTagName("Data").length; i++) {
+
+            txt = xmlhttp.responseXML.getElementsByTagName("Data")[i].childNodes[0].nodeValue + "<br>";
+
+        var pos = txt.indexOf("FIA IM Equity");
+        document.write(pos);}
+
+
+function myFunction() {
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    var a = fruits.indexOf("Apple");
+    document.getElementById("demo").innerHTML = a;
+}
+</script>
+
+
+<script>
+function myFunction() {
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    var a = fruits.indexOf("Apple");
+    document.getElementById("demo").innerHTML = a;
+}
+</script>
+
+
+document.write("<table border='1'>");
+document.write("<table border='1'>");
+    var x=xmlDoc.getElementsByTagName("CD");
+    for (i=0;i<x.length;i++)
+    {
+    document.write("<tr><td>");
+        document.write(x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue);
+        document.write("</td><td>");
+        document.write(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
+        document.write("</td></tr>");
+    }
+    document.write("</table>");
+
+  var m= xml.getElementsByTagName("Data");
+var i;
+
+
+    {
+        document.write("<tr><td>");
+        document.write(x[i].getElementsByTagName("Data")[1].childNodes[0].nodeValue);
+        document.write("</td><td>");
+
+    }
+    document.write("</table>");
+</body>
+</html>
+
+<script>
+    cars = ["BMW", "Volvo", "Saab", "Ford"];
+    pis = [5,4,3,2];
+    text = "";
+    var i;
+    var b;
+    for (i = 0; i < cars.length; i++) {
+        for ( b = 0; b < pis.length; b++)
+        {
+            text +=  cars[i] + pis[b] + "<br>";
+
+        }
+
+
+
+    }
+
+    document.getElementById("demo").innerHTML = text;
+</script>
+
+-->
+
+
+
+</body>
+</html>
+
+
